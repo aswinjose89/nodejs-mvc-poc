@@ -1,27 +1,25 @@
 ### Express Model View Controller Pattern (MVC)
 
-**Berikut adalah** gambaran bagaimana kita dapat menerapkan sebuah konsep **MVC** pada aplikasi **NodeJS** kita mengunakan **Express Framework**, yang nantinya bisa teman - teman terapkan saat membuat sebuah aplikasi dengan mengunakan `Nodejs like Expres` atau yang lainnya.
+The following is an illustration of how we can apply an **MVC** concept to our **NodeJS** application using the **Express Framework**, which later friends can apply when creating an application using Nodejs like Express or others.
 
-![](https://i.imgur.com/aosyh92.png)
+#### How to Run:
 
-#### Cara Menjalankan:
+- install all modules first by typing `npm install` or `yarn add`
 
-- install semua module terlebih dahulu dengan mengetikan `npm install` atau `yarn add`
-
-- untuk menjalankannya silahkan ketikan `npm run dev` atau `yarn run dev`
+- to run it please type `npm run dev` or `yarn run dev`
 
 #### Endpoint Route:
 
 | Name              | Endpoint Route                    |
 | ----------------- | --------------------------------- |
 | home              | http://localhost:3000             |
-| create mahasiswa  | http://localhost:3000/mhs/create  |
-| results mahasiswa | http://localhost:3000/mhs/results |
-| result mahasiswa  | http://localhost:3000/mhs/result  |
-| delete mahasiswa  | http://localhost:3000/mhs/delete  |
-| update mahasiswa  | http://localhost:3000/mhs/update  |
+| create student  | http://localhost:3000/mhs/create  |
+| results student | http://localhost:3000/mhs/results |
+| result student  | http://localhost:3000/mhs/result  |
+| delete student  | http://localhost:3000/mhs/delete  |
+| update student  | http://localhost:3000/mhs/update  |
 
-#### Struktur Folder:
+#### Folder Structure:
 
 - app
 - controllers
@@ -35,29 +33,29 @@
 - core
 - public
 
-#### Penjelasan Strukture Folder:
+#### Structure:
 
-- **app** tempat yang berisi untuk menyimpan, semua fungsi dari aplikasi yang nantinya akan kita buat
+- **app** a place that contains to store, all the functions of the application that we will make later
 
-- **controller** tempat yang berisi semua logic dari aplikasi tersebut seperti untuk membuat tambah data mahasiswa, hapus data mahasiswa dll
+- **controller** a place that contains all the logic of the application such as to add student data, delete student data, etc
 
-- **helper** tempat yang berisi sebuah fungsi penolong sebagai utility untuk digunakan seperti **custome message, custome email template** dll
+- **helper** a place that contains a helper function as a utility to use such as **custom message, custom email template** dll
 
-- **libs** tempat yang berisi untuk customisasi library yang telah kita install seperti **jwt, bcrypt** yang nantinya bisa kita custom menjadi sebuah fungsi tersendiri untuk digunakan
+- **libs** a place that contains for customizing libraries that we have installed such as **jwt, bcrypt** which we can later customize into a separate function to use
 
-- **middleware** tempat yang berisi untuk custome function middleware yang digunakan untuk keperluan **auth jwt, auth role** dll
+- **middleware** place containing for custom function middleware used for needs **auth jwt, auth role** dll
 
-- **model** tempat yang berisi untuk melakukan pembuatan schema baik itu dengan **mongodb or mongoose** yang nantinya akan digunakan oleh **controller** sebagai bagian dari logic aplikasi itu sendiri
+- **model** a place that contains for creating schema either with **mongodb or mongoose** which will later be used by **controller** as part of the application logic itself
 
-- **route** tempat yang berisi untuk pembuatan routing pada aplikasi untuk meneruskan fungsi dari **controller ke view**
+- **route** a place that contains for the creation of routing in the application to pass functions from **controller to view**
 
-- **config** tempat yang berisi untuk pembuatan konfigurasi dari **database** atau yang lainnya
+- **config** a place that contains for making configurations from **database** or something else
 
-- **core** tempat pengendali atau inti dari aplikasi dari **model**, **controller**, **route** dan **view**
+- **core** controller or core place of application of **model**, **controller**, **route** and **view**
 
-- **public** tempat yang berisi untuk penyimpanan asset static seperti **CSS**, **JavaScript**, **Gambar** dll
+- **public** a place that contains for storing static assets such as **CSS**, **JavaScript**, **Images** etc.
 
-## Berikut adalah contoh dari masing - masing fungsi:
+## Here is an example of each function:
 
 #### Core Controller
 
@@ -315,5 +313,4 @@ class App extends Route {
 // init application
 new App().init()
 ```
-
-**Semoga** dengan adanya tutorial ini bisa membantu teman - teman semua yang sedang belajar, khususnya belajar **NodeJs** dan nantinya bisa menerapkan konsep **MVC** pada aplikasi yang akan dibuat oleh teman - teman. **Terimakasih**
+ **NodeJs** and later can apply the concept **MVC** on the application that will be made by friends. **Thank you**
